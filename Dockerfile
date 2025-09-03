@@ -13,7 +13,7 @@ COPY . .
 RUN npm run build
 
 # production stage
-FROM node:current-alpine3.22 as production-stage
+FROM node:localpin as production-stage
 
 COPY --from=build-stage /app/dist /app
 COPY --from=build-stage /app/package.json /app/package.json
