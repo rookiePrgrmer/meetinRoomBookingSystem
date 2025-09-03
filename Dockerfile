@@ -1,4 +1,4 @@
-FROM node:current-alpine3.22 as build-stage
+FROM node:localpin as build-stage
 
 WORKDIR /app
 
