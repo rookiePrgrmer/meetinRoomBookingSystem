@@ -11,6 +11,8 @@ services:
       - 3000:3000
     networks:
       - common-network
+    env_file:
+      - ./src/.env
   mysql-container:
     image: mysql:localpin
     volumes:
