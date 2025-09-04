@@ -1,5 +1,13 @@
 version: '3.8'
 services:
+  fe-app:
+    image: crpi-kqvk1j9epq5u5zgd.cn-beijing.personal.cr.aliyuncs.com/ankuixing_test_namespace/ankuixing:v1
+    ports:
+      - 80:80
+    depends_on:
+      - nest-app
+    networks:
+      - common-network
   nest-app:
     build:
       context: ./
@@ -7,8 +15,8 @@ services:
     depends_on:
       - mysql-container
       - redis-container
-    ports:
-      - 3000:3000
+    # ports:
+    #   - 3000:3000
     networks:
       - common-network
     env_file:
