@@ -2,6 +2,8 @@ version: '3.8'
 services:
   fe-app:
     image: crpi-kqvk1j9epq5u5zgd.cn-beijing.personal.cr.aliyuncs.com/ankuixing_test_namespace/ankuixing:v1
+    # image: fe-container:first
+    platform: linux/arm64/v8
     ports:
       - 80:80
     depends_on:
